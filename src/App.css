@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 50px;
+  max-width: 180px;
+}
+
+.calendar-panel {
+  width: 450px;
+  height: 450px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  border-left: 1px solid lightgrey;
+  border-top: 1px solid lightgrey;
+}
+
+.calendar-panel-item {
+  border-right: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  padding: 4px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.calendar-panel-item--today {
+  color: red;
+}
+
+.calendar-panel-item__date {
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.calendar-panel-item--selected .calendar-panel-item__date {
+  background-color: red;
+  color: white;
+}
+
+.calendar-panel-item--not-current .calendar-panel-item__date {
+  opacity: 0.5;
+}
+
+.calendar-panel-item--not-in-range {
+  cursor: not-allowed;
+}
+
+.calendar-panel-item--not-in-range .calendar-panel-item__date {
+  opacity: 0.5;
+}
+
+input {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  font-size: 16px;
+  width: 100%;
+}
+
+input:focus {
+  outline-color: lightblue;
+}
+
+.date-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.popup-container {
+  border: 1px solid lightgrey;
+}
+
+.btn-container {
+  padding: 0 5px;
+}
+
+.btn {
+  border: none;
+  background-color: lightblue;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
